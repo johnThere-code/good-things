@@ -1,0 +1,34 @@
+$primary-color: #3498db;
+$secondary-color: #2ecc71;
+$font-size: 16px;
+
+.container {
+  width: 100%;
+  height: 80vh;
+  
+  .header {
+    font-size: $font-size;
+    color: $primary-color;
+  }
+  
+  .footer {
+    font-size: $font-size;
+    color: $secondary-color;
+  }
+}
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  border-radius: $radius;
+}
+
+.button {
+  @include border-radius(5px);
+  background-color: $primary-color;
+  color: white;
+  
+  &:hover {
+    background-color: darken($primary-color, 10%);
+  }
+}
