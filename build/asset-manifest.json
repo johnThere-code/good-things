@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/docs/static/css/main.ecd14b31.css",
-    "main.js": "/docs/static/js/main.fd081315.js",
-    "index.html": "/docs/index.html",
-    "main.ecd14b31.css.map": "/docs/static/css/main.ecd14b31.css.map",
-    "main.fd081315.js.map": "/docs/static/js/main.fd081315.js.map"
+    "main.css": "/good-things/static/css/main.ecd14b31.css",
+    "main.js": "/good-things/static/js/main.fd081315.js",
+    "index.html": "/good-things/index.html",
+    "main.ecd14b31.css.map": "/good-things/static/css/main.ecd14b31.css.map",
+    "main.fd081315.js.map": "/good-things/static/js/main.fd081315.js.map"
   },
   "entrypoints": [
     "static/css/main.ecd14b31.css",
