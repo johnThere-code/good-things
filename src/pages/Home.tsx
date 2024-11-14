@@ -40,7 +40,7 @@ const HomePage = () => {
   };
   return (
     <div>
-      <h1 className='fr_c_c' >Good things to share</h1>
+      <h1 className='fr_c_c' >Gadget to share</h1>
 
       <div className="container fc_s_s">
         {items.map((item) => (
