@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/good-things/static/css/main.d5c01539.css",
-    "main.js": "/good-things/static/js/main.32f3482c.js",
+    "main.js": "/good-things/static/js/main.2298e49a.js",
     "index.html": "/good-things/index.html",
     "main.d5c01539.css.map": "/good-things/static/css/main.d5c01539.css.map",
-    "main.32f3482c.js.map": "/good-things/static/js/main.32f3482c.js.map"
+    "main.2298e49a.js.map": "/good-things/static/js/main.2298e49a.js.map"
   },
   "entrypoints": [
     "static/css/main.d5c01539.css",
-    "static/js/main.32f3482c.js"
+    "static/js/main.2298e49a.js"
   ]
 }

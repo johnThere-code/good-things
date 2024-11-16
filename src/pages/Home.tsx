@@ -4,7 +4,7 @@ import { Button, Toast, Card } from 'antd-mobile';
 import { AntOutline, } from 'antd-mobile-icons'
 import './DroneControl.scss';  // 引入 Less 样式文件
 import axios from '../utils/axios'; // 导入封装的 axios 实例
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useParams  } from 'react-router-dom';
 const HomePage = () => {
   const navigate = useNavigate(); // 获取导航函数
   const [loading, setLoading] = useState(false);
@@ -15,6 +15,16 @@ const HomePage = () => {
     { id: 2, title: 'Umbra Tipsy Bottle Opener', description: 'Sculptural Bar Accessory, Luxury Flying Bird Soda, Cider, and Beer Opener, Chrome', url: 'https://amzn.to/4ewIYD5', img: 'https://m.media-amazon.com/images/I/61qrzLWuqOL._AC_SX569_.jpg' },
     { id: 3, title: 'Soap Dispensing Palm Brush', description: 'Soap Dispensing Palm Brush for Pot Pan SinkCleaning,Tableware Kitchen Scrubber,with PET Replacement Balls One Set and Storage Tray', url: 'https://amzn.to/4fOYfjI', img: 'https://m.media-amazon.com/images/I/61z7XsmqmqL._AC_SX679_.jpg' },
   ]
+  const {id}= useParams(); // 获取查询参数
+  if(id){
+    const mathItem = items.find((item)=>item.id===Number(id) )
+    console.log('mathItem',mathItem)
+    if(mathItem){
+      // window.open(mathItem.url, "_blank");
+      window.location.href = mathItem.url;
+    }
+    
+  }
   const handleDirection = async (direction: string) => {
     console.log(`操作方向: ${direction}`);
     setLoading(true);
