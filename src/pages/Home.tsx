@@ -14,6 +14,8 @@ const HomePage = () => {
     { id: 1, title: 'Munch Rotary Cheese Grater', description: 'Cheese Shredder with Handle & 5 Stainless Steel Blades - Manuel Rotating Cheese Grinder & - Potato & Vegetable Grater', url: 'https://amzn.to/4fxbZ2D', img: 'https://m.media-amazon.com/images/S/aplus-media-library-service-media/5d771854-97a2-484c-b155-a55f0ab19bd6.__CR0,0,900,900_PT0_SX300_V1___.jpg' },
     { id: 2, title: 'Umbra Tipsy Bottle Opener', description: 'Sculptural Bar Accessory, Luxury Flying Bird Soda, Cider, and Beer Opener, Chrome', url: 'https://amzn.to/4ewIYD5', img: 'https://m.media-amazon.com/images/I/61qrzLWuqOL._AC_SX569_.jpg' },
     { id: 3, title: 'Soap Dispensing Palm Brush', description: 'Soap Dispensing Palm Brush for Pot Pan SinkCleaning,Tableware Kitchen Scrubber,with PET Replacement Balls One Set and Storage Tray', url: 'https://amzn.to/4fOYfjI', img: 'https://m.media-amazon.com/images/I/61z7XsmqmqL._AC_SX679_.jpg' },
+    { id: 4, title: 'Queekay 6 Pcs Home Gym Mirrors', description: 'Queekay 6 Pcs Home Gym Mirrors 12" x 24" Acrylic Wall Mirror Tiles 2mm Thick Self Adhesive Mirror Sheets Frameless Wall Mounted Mirror Stickers Decor for Workout Bedroom Ceiling', url: 'https://amzn.to/40JCe1k', img: 'https://m.media-amazon.com/images/I/61kpWVrv7AL._AC_SX679_.jpg' },
+    
   ]
   const {id}= useParams(); // 获取查询参数
   if(id){
