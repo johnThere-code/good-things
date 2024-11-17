@@ -5,6 +5,8 @@ import { AntOutline, } from 'antd-mobile-icons'
 import './DroneControl.scss';  // 引入 Less 样式文件
 import axios from '../utils/axios'; // 导入封装的 axios 实例
 import { useNavigate, useParams  } from 'react-router-dom';
+import { logEvent } from "firebase/analytics";
+import { analytics } from "../firebase/firebase";
 const HomePage = () => {
   const navigate = useNavigate(); // 获取导航函数
   const [loading, setLoading] = useState(false);
@@ -22,10 +24,24 @@ const HomePage = () => {
     const mathItem = items.find((item)=>item.id===Number(id) )
     console.log('mathItem',mathItem)
     if(mathItem){
+      if (analytics) {
+        logEvent(analytics, "auto_item_click", {
+          button_name: `good_${id}`,
+        });
+      }
+      
       // window.open(mathItem.url, "_blank");
       window.location.href = mathItem.url;
     }
     
+  }
+  const recordAnalytics = (event: React.MouseEvent<HTMLAnchorElement>, id: number)=>{
+    // event.preventDefault(); // 可选，阻止默认行为
+    if (analytics) {
+      logEvent(analytics, "item_click", {
+        button_name: `good_${id}`,
+      });
+    }
   }
   const handleDirection = async (direction: string) => {
     console.log(`操作方向: ${direction}`);
@@ -58,6 +74,7 @@ const HomePage = () => {
         {items.map((item) => (
           <a
             href={item.url}
+            onClick={ (e) => recordAnalytics(e, item.id)}
             key={item.id}
             target="_blank"
             rel="noopener noreferrer"
